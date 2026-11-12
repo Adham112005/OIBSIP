@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#090b22">
+<meta name="description" content="TaskHub - a modern task management app."><title>TaskHub | Stay Organized</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body>
+<div class="theme-switch"><button class="theme-btn" id="light-theme" type="button" aria-label="Light theme">☀</button><button class="theme-btn active" id="dark-theme" type="button" aria-label="Dark theme">☾</button></div>
+<main class="app-shell">
+<aside class="sidebar">
+<a class="brand" href="#"><span class="brand-symbol">✓</span><span class="brand-name">Task<span>Hub</span></span></a><p class="brand-caption">Stay Organized</p>
+<nav class="navigation" aria-label="Task filters">
+<button class="nav-item active" data-filter="all"><span class="nav-icon">▦</span><span>All Tasks</span><span class="nav-count" id="all-nav-count">0</span></button>
+<button class="nav-item" data-filter="pending"><span class="nav-icon">◷</span><span>Pending</span><span class="nav-count" id="pending-nav-count">0</span></button>
+<button class="nav-item" data-filter="completed"><span class="nav-icon">✓</span><span>Completed</span><span class="nav-count" id="completed-nav-count">0</span></button>
+</nav>
+<section class="motivation-card"><div class="rocket">🚀</div><h2 id="motivation-title">Ready to begin?</h2><p id="motivation-copy">Small steps lead to big wins.</p><div class="progress-ring" id="progress-ring" role="progressbar" aria-label="Task completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-inner"><strong id="progress-value">0%</strong></div></div><span class="progress-caption">Your progress</span></section>
+<div class="sidebar-footer"><span class="online-dot"></span>Your tasks are saved locally</div>
+</aside>
+<section class="workspace">
+<header class="hero"><div><p class="eyebrow">PLAN · ORGANIZE · ACHIEVE</p><h1>My Tasks<span class="heading-dot">.</span></h1><p class="hero-subtitle">A little progress each day adds up to big results.</p></div><div class="hero-art" aria-hidden="true"><div class="art-glow"></div><div class="art-calendar"><div class="calendar-rings"><i></i><i></i><i></i></div><b>✓　━━━━</b><br><b>✓　━━━━</b><br><b>✓　━━━━</b></div><div class="art-clock">◷</div><div class="art-leaf">✦</div></div></header>
+<section class="composer" aria-label="Add a task"><span class="composer-plus">+</span><input id="task-input" type="text" maxlength="120" placeholder="Add a new task..." aria-label="Task description"><select id="priority-input" aria-label="Task priority"><option value="low">Low</option><option value="medium" selected>Medium</option><option value="high">High</option></select><input id="date-input" type="date" aria-label="Due date"><button id="add-task-btn" class="add-button" type="button">➤　Add Task</button></section>
+<p class="form-message" id="form-message" role="alert"></p>
+<div class="content-toolbar"><div><h2 id="list-heading">All Tasks</h2><p id="list-subheading">Keep your day on track.</p></div><button id="clear-completed-btn" class="clear-button" type="button">▤　Clear completed</button></div>
+<section class="task-section" id="pending-section" aria-labelledby="pending-heading"><div class="section-heading"><h3 id="pending-heading"><span class="status-dot pending-dot"></span>Pending Tasks <span class="section-count" id="pending-count">0</span></h3></div><ul class="task-list" id="pending-list"></ul></section>
+<section class="task-section completed-section" id="completed-section" aria-labelledby="completed-heading"><div class="section-heading"><h3 id="completed-heading"><span class="status-dot completed-dot"></span>Completed Tasks <span class="section-count" id="completed-count">0</span></h3></div><ul class="task-list" id="completed-list"></ul></section>
+<footer class="app-footer"><span>BUILT WITH HTML · CSS · JAVASCRIPT</span><span>OASIS INFOBYTE · WEB DEVELOPMENT & DESIGNING</span></footer>
+</section></main>
+<dialog class="edit-dialog" id="edit-dialog"><form method="dialog" id="edit-form"><div class="dialog-header"><h2>Edit task</h2><button class="dialog-close" value="cancel" aria-label="Close dialog">×</button></div><label for="edit-task-input">Task name</label><input id="edit-task-input" type="text" maxlength="120" required><label for="edit-priority-input">Priority</label><select id="edit-priority-input"><option value="low">Low</option><option value="medium">Medium</option><option value="high">High</option></select><label for="edit-date-input">Due date</label><input id="edit-date-input" type="date"><div class="dialog-actions"><button class="cancel-button" value="cancel">Cancel</button><button class="save-button" id="save-edit-btn" value="save">Save changes</button></div></form></dialog>
+</body></html>

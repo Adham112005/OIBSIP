@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Dashboard</h1>
+    <p class="subtitle">This page is only visible to logged-in users.</p>
+
+    <p id="message" class="message" role="alert"></p>
+
+    <div class="profile">
+      <p><span class="label">Signed in as</span> <strong id="user-email">…</strong></p>
+      <p><span class="label">Member since</span> <span id="user-since">…</span></p>
+    </div>
+
+    <button type="button" id="logout-btn">Logout</button>
+  </main>
+
+  <script src="/assets/common.js"></script>
+  <script src="/assets/dashboard.js"></script>
+</body>
+</html>

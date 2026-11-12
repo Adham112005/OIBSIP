@@ -1,0 +1,20 @@
+{
+  "name": "oibsip-login-system",
+  "version": "1.0.0",
+  "description": "Login authentication system (Node.js, Express, SQLite) for Oasis Infobyte SIP",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.4",
+    "express-session": "^1.19.0",
+    "helmet": "^8.3.0"
+  }
+}
